@@ -12,17 +12,32 @@ namespace ToolBoxdemo
         {
 
             Console.WriteLine("Welcome to your tool Box");
-            KeyToContinue();
+            Console.WriteLine("You can either hit \"Y\" then ENTER to continue , or hit \"N\" then ENTER to clear the console and continue");
+
+            string userResponse = Console.ReadLine();
+
+            if (userResponse == "y")
+            {
+                KeyToContinue();
+            }
+            else if (userResponse == "N")
+            {
+                KeyToContinueWithClearConsole();
+            }
+            else
+            {
+                Console.WriteLine("Not sure friend, but I'm gonna close the program when you hit ENTER");
+            }
+            Console.ReadLine();
+
+
+            //functions below this line
+            KeyToContinueWithClearConsole();
 
             Console.ReadLine();
 
 
-            // Functions are methods written outside of a custum class
-            // Methods are functions written inside of a custum class
-
-
             //functions below this line
-
             void KeyToContinue()
             {
 
@@ -35,9 +50,20 @@ namespace ToolBoxdemo
             {
 
                Console.Clear();
-                Console.WriteLine("Congratulations! You've cleared the console!... hit enter to close the programm");
+                Console.WriteLine("Congratulations! You've cleared the console!.........hit enter to close the programm");
             
+            }
+            void KeyToContinueWithClearConsole()
+            {
+                KeyToContinue();
+                ClearConsole();
             }
         }
     }
 }
+
+            // Functions are methods written outside of a custum class
+            // Methods are functions written inside of a custum class
+
+
+            //functions below this line
